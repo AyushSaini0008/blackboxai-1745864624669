@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChatGPT Replica</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #343541;
+      color: #d1d5db;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      color: #9ca3af;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4 bg-gray-900 border-b border-gray-700">
+    <div class="flex items-center space-x-3">
+      <i class="fas fa-robot text-2xl text-green-400"></i>
+      <span class="text-white text-xl font-semibold">ChatGPT</span>
+    </div>
+    <nav class="space-x-4">
+      <a href="#" class="text-gray-300 hover:text-white font-medium">Log in</a>
+      <a href="#" class="bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded-md">Sign up</a>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main class="flex-grow flex flex-col items-center justify-center px-4 text-center max-w-3xl mx-auto">
+    <h1 class="text-3xl md:text-4xl font-semibold mb-6">What can I help with?</h1>
+
+    <section class="bg-gray-800 rounded-lg p-6 w-full space-y-6">
+      <div class="text-gray-400 text-sm">
+        <p><strong>Temporary Chat</strong></p>
+        <p>This chat won't appear in history or be used to train our models. For safety purposes, we may keep a copy of this chat for up to 30 days.</p>
+      </div>
+
+      <textarea
+        rows="4"
+        placeholder="Type your message here..."
+        class="w-full rounded-md bg-gray-700 text-gray-100 p-3 resize-none focus:outline-none focus:ring-2 focus:ring-green-400"
+      ></textarea>
+
+      <div class="flex justify-between text-gray-400 text-xs">
+        <div class="space-x-4">
+          <button class="hover:text-white" aria-label="Attach"><i class="fas fa-paperclip"></i> Attach</button>
+          <button class="hover:text-white" aria-label="Search"><i class="fas fa-search"></i> Search</button>
+          <button class="hover:text-white" aria-label="Reason"><i class="fas fa-lightbulb"></i> Reason</button>
+          <button class="hover:text-white" aria-label="Voice"><i class="fas fa-microphone"></i> Voice</button>
+        </div>
+        <div>
+          <button class="bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-1 rounded-md">Send</button>
+        </div>
+      </div>
+    </section>
+
+    <p class="mt-8 text-gray-500 text-xs max-w-xs mx-auto">
+      By messaging ChatGPT, you agree to our
+      <a href="https://openai.com/terms" target="_blank" rel="noopener noreferrer">Terms</a> and have read our
+      <a href="https://openai.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+    </p>
+  </main>
+</body>
+</html>
